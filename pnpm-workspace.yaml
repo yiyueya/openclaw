@@ -17,7 +17,6 @@ minimumReleaseAgeExclude:
 
 onlyBuiltDependencies:
   - "@lydell/node-pty"
-  - "@matrix-org/matrix-sdk-crypto-nodejs"
   - "@napi-rs/canvas"
   - "@tloncorp/api"
   - "@whiskeysockets/baileys"
@@ -30,3 +29,4 @@ onlyBuiltDependencies:
 ignoredBuiltDependencies:
   - "@discordjs/opus"
   - koffi
+  - "@matrix-org/matrix-sdk-crypto-nodejs"

@@ -158,6 +158,14 @@ export async function ensureMatrixCryptoRuntime(
     }
   }
 
+  // Check if running on Android
+  const platform = process.platform;
+  if (platform === "android") {
+    throw new Error(
+      "Matrix crypto runtime is not supported on Android. Encryption will be disabled.",
+    );
+  }
+
   const resolveFn = params.resolveFn ?? defaultResolveFn;
   const scriptPath = resolveFn("@matrix-org/matrix-sdk-crypto-nodejs/download-lib.js");
   params.log?.("matrix: bootstrapping native crypto runtime");
